@@ -1,0 +1,18 @@
+{
+  "title": "A meta-schema describing the syntax of a vocabulary that supports relative min / max validation",
+  "$id": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax-vocabulary",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$vocabulary": {
+    "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax": true
+  },
+  "$dynamicAnchor": "meta",
+  "type": ["integer", "number"],
+  "properties": {
+    "minVariable": {
+      "type": "string"
+    },
+    "maxVariable": {
+      "type": "string"
+    }
+  }
+}
