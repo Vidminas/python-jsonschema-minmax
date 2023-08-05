@@ -1,6 +1,6 @@
 {
   "title": "An extension to the JSON Schema 2020-12 meta-schema, incorporating a vocabulary that supports min/max relative constraints",
-  "$id": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax-metaschema",
+  "$id": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-metaschema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$vocabulary": {
     "https://json-schema.org/draft/2020-12/vocab/core": true,
@@ -10,7 +10,7 @@
     "https://json-schema.org/draft/2020-12/vocab/meta-data": true,
     "https://json-schema.org/draft/2020-12/vocab/format-annotation": true,
     "https://json-schema.org/draft/2020-12/vocab/content": true,
-    "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax": true
+    "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-vocabulary.json": true
   },
   "$dynamicAnchor": "meta",
   "type": ["object", "boolean"],
@@ -23,7 +23,7 @@
     { "$ref": "https://json-schema.org/draft/2020-12/meta/format-annotation" },
     { "$ref": "https://json-schema.org/draft/2020-12/meta/content" },
     {
-      "$ref": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax-vocabulary"
+      "$ref": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-vocabulary.json"
     }
   ]
 }
