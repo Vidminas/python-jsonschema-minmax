@@ -6,7 +6,7 @@
     "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-vocabulary.json": true
   },
   "$dynamicAnchor": "meta",
-  "type": ["integer", "number"],
+  "type": ["object", "boolean"],
   "properties": {
     "minVariable": {
       "type": "string"
