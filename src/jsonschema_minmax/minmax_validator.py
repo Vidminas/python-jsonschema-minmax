@@ -10,8 +10,13 @@ def extend_with_variables(validator_class: type[Validator]) -> type[Validator]:
     validate_properties = validator_class.VALIDATORS["properties"]
 
     def set_variables(validator, properties, instance, schema):
+        if not isinstance(instance, dict):
+            return
+
         for property, subschema in properties.items():
             if property not in instance:
+                continue
+            if not isinstance(subschema, dict):
                 continue
 
             if "minVariable" in subschema:
