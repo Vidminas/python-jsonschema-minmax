@@ -26,3 +26,6 @@ dependencies = [
 [project.urls]
 "Homepage" = "https://github.com/Vidminas/python-jsonschema-minmax"
 "Bug Tracker" = "https://github.com/Vidminas/python-jsonschema-minmax/issues"
+
+[tool.hatch.build.targets.wheel.force-include]
+"metaschema" = "jsonschema_minmax/metaschema"
