@@ -3,7 +3,7 @@ from jsonschema.protocols import Validator
 from jsonschema.validators import Draft202012Validator
 from jsonschema.exceptions import ValidationError
 
-from . import REGISTRY
+from .registry import REGISTRY
 
 
 def extend_with_variables(validator_class: Validator) -> Validator:
@@ -52,5 +52,5 @@ def extend_with_variables(validator_class: Validator) -> Validator:
 
 MinMaxValidator = extend_with_variables(Draft202012Validator)
 MinMaxValidator.META_SCHEMA = REGISTRY.contents(
-    "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/metaschema/minmax-metaschema"
+    "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-metaschema.json"
 )
