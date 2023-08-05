@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jsonschema-minmax"
+version = "0.0.1"
+authors = [
+  { name="Vidminas Mikucionis", email="5411598+Vidminas@users.noreply.github.com" },
+]
+description = "A Draft2020-21 metaschema and python-jsonschema extension to allow defining and validating relative min/max constraints"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: File Formats :: JSON",
+    "Topic :: File Formats :: JSON :: JSON Schema",
+]
+dependencies = [
+  "referencing >= 0.30.0",
+  "jsonschema >= 4.18.4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Vidminas/python-jsonschema-minmax"
+"Bug Tracker" = "https://github.com/Vidminas/python-jsonschema-minmax/issues"
