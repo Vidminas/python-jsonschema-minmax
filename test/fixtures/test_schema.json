@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "allOf": [
+      { "$ref": "#/$defs/min" },
+      { "$ref": "#/$defs/max" }
+  ],
+  "required": ["fridge_min_temp", "fridge_max_temp"],
+  "$defs": {
+      "min": { "properties": { "fridge_min_temp": { "type": "integer", "minimum": -20, "maximum": 5 } } },
+      "max": { 
+          "$schema": "https://raw.githubusercontent.com/Vidminas/python-jsonschema-minmax/main/metaschema/minmax-metaschema.json",
+          "properties": { "fridge_max_temp": { "type": "integer", "minVariable": "fridge_min_temp", "maximum": 5 } }
+      }
+  }
+}
