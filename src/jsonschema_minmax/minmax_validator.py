@@ -6,7 +6,7 @@ from jsonschema.exceptions import ValidationError
 from .registry import REGISTRY
 
 
-def extend_with_variables(validator_class: Validator) -> Validator:
+def extend_with_variables(validator_class: type[Validator]) -> type[Validator]:
     validate_properties = validator_class.VALIDATORS["properties"]
 
     def set_variables(validator, properties, instance, schema):
@@ -47,6 +47,7 @@ def extend_with_variables(validator_class: Validator) -> Validator:
         {
             "properties": set_variables,
         },
+        version="draft2020-12-minmax",
     )
 
 
